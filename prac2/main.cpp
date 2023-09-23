@@ -26,7 +26,7 @@ public:
 };
 
 char randomGen() {
-	static string charset = "abcdefghijklmnopqrstuvwxyz";
+	string charset = "abcdefghijklmnopqrstuvwxyz";
 	return charset[rand() % charset.length()];
 }
 

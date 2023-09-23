@@ -3,4 +3,4 @@ project(prac)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(prac prac2/main.cpp)
+add_executable(prac prac3/mainmap.cpp)
