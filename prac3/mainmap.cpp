@@ -41,11 +41,6 @@ struct HashTable {
 	}
 
 	HashTable(int size) {
-		if (size < 10) {
-			cout << "Слишком маленькая таблица" << endl;
-			return;
-		}
-
 		this->size = size;
 		table = vector<SmallBusiness *>(size);
 	}
@@ -66,16 +61,6 @@ struct HashTable {
 		return hashVal;
 	}
 
-	int searchPlace(int licenseNumber) {
-		int hashVal = hashValue(licenseNumber);
-		int stepSize = hashStep(licenseNumber);
-		while (table[hashVal] != nullptr &&
-			   table[hashVal]->licenseNumber != licenseNumber) {
-			hashVal = hashVal + stepSize;
-			hashVal = hashVal % size;
-		}
-		return hashVal;
-	}
 
 	SmallBusiness *search(int licenseNumber) {
 		int hashVal = hashValue(licenseNumber);
@@ -93,7 +78,7 @@ struct HashTable {
 	}
 
 	void insert(SmallBusiness *entry) {
-		int pos = searchPlace(entry->licenseNumber);
+		int pos = searchKey(entry->licenseNumber);
 		if (table[pos] == nullptr) {
 			table[pos] = entry;
 		}
