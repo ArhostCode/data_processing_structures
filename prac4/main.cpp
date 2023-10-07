@@ -69,6 +69,8 @@ map<string, int> search(vector<string> pat, string txt, int q) {
 		int d = 256;
 		for (i = 0; i < patternSize - 1; i++)
 			h = (h * d) % q;
+		if (patternSize > stringSize)
+			continue;
 
 		for (i = 0; i < patternSize; i++) {
 			patternHashValue = (d * patternHashValue + pattern[i]) % q;
@@ -113,7 +115,9 @@ int main() {
 	SetConsoleOutputCP(CP_UTF8);
 	string choice;
 	while (choice != "exit") {
-		cout << "Выберите задание. exchange для обмена 1 и последнего, rabin - подсчёт подстрок в строке, simple - для простого поиска подстроки в строке" << endl;
+		cout
+				<< "Выберите задание. exchange для обмена 1 и последнего, rabin - подсчёт подстрок в строке, simple - для простого поиска подстроки в строке"
+				<< endl;
 		getline(cin, choice);
 		if (choice == "exchange") {
 			string text;
