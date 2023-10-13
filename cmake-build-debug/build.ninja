@@ -49,11 +49,11 @@ cmake_ninja_workdir = C$:/Users/e-gul/CLionProjects/prac2/cmake-build-debug/
 
 build cmake_object_order_depends_target_prac: phony || CMakeFiles/prac.dir
 
-build CMakeFiles/prac.dir/prac5/main.cpp.obj: CXX_COMPILER__prac_Debug C$:/Users/e-gul/CLionProjects/prac2/prac5/main.cpp || cmake_object_order_depends_target_prac
-  DEP_FILE = CMakeFiles\prac.dir\prac5\main.cpp.obj.d
+build CMakeFiles/prac.dir/prac6/main.cpp.obj: CXX_COMPILER__prac_Debug C$:/Users/e-gul/CLionProjects/prac2/prac6/main.cpp || cmake_object_order_depends_target_prac
+  DEP_FILE = CMakeFiles\prac.dir\prac6\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\prac.dir
-  OBJECT_FILE_DIR = CMakeFiles\prac.dir\prac5
+  OBJECT_FILE_DIR = CMakeFiles\prac.dir\prac6
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/prac.dir/prac5/main.cpp.obj: CXX_COMPILER__prac_Debug C$:/Users
 #############################################
 # Link the executable prac.exe
 
-build prac.exe: CXX_EXECUTABLE_LINKER__prac_Debug CMakeFiles/prac.dir/prac5/main.cpp.obj
+build prac.exe: CXX_EXECUTABLE_LINKER__prac_Debug CMakeFiles/prac.dir/prac6/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\prac.dir
